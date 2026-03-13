@@ -16,4 +16,8 @@ public class Room {
 		this.centerCell = centerCell;
 		this.labelCell = labelCell;
 	}
+	
+	public String getName() {
+		return name;
+	}
 }
