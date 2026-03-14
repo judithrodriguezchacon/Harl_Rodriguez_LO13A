@@ -9,8 +9,22 @@ public class Board {
 	private String layoutConfigFiles;
 	private String setupConfigFiles;
 	private Map<Character, Room> roomMap;
-	private static Board theInstance;
+	private static Board theInstance = new Board();
 	
+	//singleton style constructor
+
+    // constructor is private to ensure only one can be created
+    private Board() {
+           super() ;
+    }
+    // this method returns the only Board
+    public static Board getInstance() {
+           return theInstance;
+    }
+    
+    /*
+     * initialize the board (since we are using singleton pattern)
+     */
 	public void initialize() {
 		
 	}
@@ -26,10 +40,6 @@ public class Board {
 	public void setConfigFiles(String setupConfigFiles, String layoutConfigFiles) {
 		this.setupConfigFiles = setupConfigFiles;
 		this.layoutConfigFiles = layoutConfigFiles;
-	}
-
-	public static Board getInstance() {
-		return theInstance;
 	}
 
 	public Room getRoom(char name) {

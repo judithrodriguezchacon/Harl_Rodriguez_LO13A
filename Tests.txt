@@ -1,0 +1,6 @@
+The pollywog room has a door that opens DOWN, the wazzit room has a door that opens UP etc
+
+testRoomLabels:
+I added all of the rooms to be tested, to ensure that they were all showing up properly (while also keeping the )
+
+testBoardDimentions:
