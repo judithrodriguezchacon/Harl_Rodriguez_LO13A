@@ -1,6 +1,15 @@
-The pollywog room has a door that opens DOWN, the wazzit room has a door that opens UP etc
 
 testRoomLabels:
-I added all of the rooms to be tested, to ensure that they were all showing up properly (while also keeping the )
+I added all of the rooms to be tested, to ensure that they were all showing up properly (while also keeping the test for the walkways too).
+
+FourDoorDirecitons:
+the Fairytopia room has a door that opens left, the Gardania room has a door opening up, the Millicent's room has a door opening to the right, and the Paris room has a door opening down.
 
 testBoardDimentions:
+changed the num_rows and num_columns to fit our board size (28x25)
+
+testNumberOfDoorways:
+counted the total number of doorway (26) and run through to test if they all register as doors
+
+testRooms:
+choose examples of each type of cell we can have (room, room label, room center, secret passageway, walkway, and an unused space) and pull and example of that cell from out board to test if it properly registers as that
