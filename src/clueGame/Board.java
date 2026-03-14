@@ -30,11 +30,18 @@ public class Board {
     /*
      * initialize the board (since we are using singleton pattern)
      */
-    //THIS MIGHT NOT BE THE BEST IDEA BUT IT'S WORKING SO FAR -- MIGHT NEED TO CHANGE FOR A TRY CATCH
-	public void initialize() throws BadConfigFormatException, FileNotFoundException {
-		loadLayoutConfig();
-	}
-	public void loadSetupConfig() throws FileNotFoundException{
+    public void initialize() {
+    	try {
+    		loadSetupConfig();
+    		loadLayoutConfig();
+    	} catch (FileNotFoundException e) {
+    		//whatever
+    	} catch (BadConfigFormatException e) {
+    		//something
+    	}
+    }
+	
+	public void loadSetupConfig() throws FileNotFoundException, BadConfigFormatException{
 		roomMap = new HashMap<>();
 		
 		Scanner scanner = new Scanner(new File(setupConfigFiles));
@@ -56,7 +63,7 @@ public class Board {
 		scanner.close();
 		
 	}
-	public void loadLayoutConfig() throws FileNotFoundException {
+	public void loadLayoutConfig() throws FileNotFoundException, BadConfigFormatException {
 		ArrayList<String[]> fileLines = new ArrayList<>();
 		Scanner scanner = new Scanner(new File(layoutConfigFiles));
 		
