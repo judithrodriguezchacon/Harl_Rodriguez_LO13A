@@ -1,7 +1,7 @@
 ,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,F,F,F,F,F,F,X,K,K,K,G,G,G,G,G,G,G,G,X,X,X,X,X,M,M,M
-,F,F,F#,F,F,<K,K,K,K,G,G,G,G,G#,G,G,G,G,G,K,K,K>,M,M,M,M
-,F,F,F*,F,F,<K,K,K,K,G,G,G,G,G,G,G,G,G,G,K,Kv,M,M,M#,M,M
+,F,F,F#,F,F,K<,K,K,K,G,G,G,G,G#,G,G,G,G,G,K,K,K>,M,M,M,M
+,F,F,F*,F,F,K<,K,K,K,G,G,G,G,G,G,G,G,G,G,K,Kv,M,M,M#,M,M
 ,F,F,F,F,F,F,K,K,K,G,G,G,G,G,G*,G,G,G,G,K,M,M,M,M,M*,M
 ,K,K,K,K,K,K,K,K,K,K>,G,G,G,G,G,G,G,G,GD,K,K^,M,M,M,M,M
 ,K,K,K,K,K,K,K,K,K,K,G,G,G,G,G,G,G,G,K,K,K,K>,M,M,M,M
@@ -19,8 +19,8 @@
 ,K,K,K,K,K,K,K,K,K,K,K,K,K,K,K,K,K,K,K,K,K,K,K,K,K,K
 ,D,D,D,Kv,K,K,K,K,K,K,K,A,A,A,K,K,K,K,K,K,X,X,X,X,X,X
 ,D,D,D,D,D,K,K,K,K,K,A,A,A#,A,A,K,K,K,K,K,X,X,L,L,L,L
-,D,D#,D,D,D,D,K,K,K,K>,A,A,A*,A,A,<K,K,K,K,K,X,L,L,L,L,L
-,D,D,D*,D,D,D,<K,K,K,K,A,A,A,A,A,K,K,K,K,K>,L,L,L#,L,L,L
+,D,D#,D,D,D,D,K,K,K,K>,A,A,A*,A,A,K<,K,K,K,K,X,L,L,L,L,L
+,D,D,D*,D,D,D,K<,K,K,K,A,A,A,A,A,K,K,K,K,K>,L,L,L#,L,L,L
 ,D,D,D,D,D,D,K,K,K,K,K,A,A,A,K,K,K,K,K,L,L,L,L,L,L,L
 ,D,D,D,D,D,K,K,K,K,K,K,K,K^,K,K,K,K,K,K,L,L,L,L,L,L,L
 ,D,D,D,DG,K,K,K,K,Kv,K,K,K,K,K,K,K,K,K,K>,L,L,L,L*,L,L,L
