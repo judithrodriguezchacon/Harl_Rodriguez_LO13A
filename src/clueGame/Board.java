@@ -48,6 +48,9 @@ public class Board {
 		
 		while (scanner.hasNextLine()){
 			String line = scanner.nextLine().trim();
+			if (line.length() == 0) {
+				continue;
+			}
 			
 			String[] parts = line.split(",");
 			
@@ -62,7 +65,15 @@ public class Board {
 			String name = parts[1].trim();
 			String symbol = parts[2].trim();
 			
-		
+			if (!type.equals("Room") && !type.equals("Space")) {
+				scanner.close();
+				throw new BadConfigFormatException("no setup type");
+			}
+
+			if (symbol.length() != 1) {
+				scanner.close();
+				throw new BadConfigFormatException("no setup symbol");
+			}
 			
 			char initial = symbol.charAt(0);
 			roomMap.put(initial, new Room (name, null, null));
@@ -83,7 +94,7 @@ public class Board {
 				expectedColumns = parts.length;
 			} else  if (parts.length != expectedColumns){
 				scanner.close();
-				//WE MIGHT WANT TO THROW AN EXCPETION HERE 
+				throw new BadConfigFormatException("smthng");
 			}
 			fileLines.add(parts);
 			
@@ -102,9 +113,14 @@ public class Board {
 				
 				//each cell must be length  1 or 2 n
 				if (cellCode.length() < 1 || cellCode.length() > 2) {
-					//Throw exception
+					throw new BadConfigFormatException("c");
 				}
 				char initial = cellCode.charAt(0);
+				
+				if (!roomMap.containsKey(initial)) {
+					throw new BadConfigFormatException("Unknown room in layout");
+				}
+				
 				BoardCell cell = new BoardCell(row,col,initial);
 				
 				//special cases
@@ -120,21 +136,22 @@ public class Board {
 					}else if (marker == 'v') {
 						cell.setDoorDirection(DoorDirection.DOWN);
 					}else if (marker == '*') {
-						cell.setLabel(true);
-						roomMap.get(initial).setLabelCell(cell);
+						cell.setRoomCenter(true);
+						roomMap.get(initial).setRoomCenter(cell);
 					}else if (marker == '#') {
 						cell.setLabel(true);
 						roomMap.get(initial).setLabelCell(cell);
 					}else if (marker == '>') {
 						cell.setDoorDirection(DoorDirection.RIGHT);
-					}else if (marker == 'D') {
-						cell.setSecretPassage('G');
+					}// this might be trouble
+					else if (marker == 'D') {
+						cell.setSecretPassage('K');
 					}else if (marker == 'G') {
-						cell.setSecretPassage('D');
+						cell.setSecretPassage('K');
 					}else if (marker == 'P') {
-						cell.setSecretPassage('M');
+						cell.setSecretPassage('K');
 					}else if (marker == 'M') {
-						cell.setSecretPassage('P');
+						cell.setSecretPassage('K');
 					}
 				}
 				grid[row][col] = cell;
@@ -143,9 +160,10 @@ public class Board {
 	}
 
 	public void setConfigFiles(String layoutConfigFiles, String setupConfigFiles) {
-		this.setupConfigFiles = setupConfigFiles;
-		this.layoutConfigFiles = layoutConfigFiles;
+		this.layoutConfigFiles = "data/" + layoutConfigFiles;
+		this.setupConfigFiles = "data/" + setupConfigFiles;
 	}
+	
 
 	
 	public Room getRoom(char initial) {
