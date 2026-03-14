@@ -20,4 +20,7 @@ public class Room {
 	public String getName() {
 		return name;
 	}
+	public BoardCell getCenterCell() {
+		return null;
+	}
 }
