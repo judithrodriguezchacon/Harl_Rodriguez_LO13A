@@ -34,11 +34,11 @@ public class Board {
     	try {
     		loadSetupConfig();
     		loadLayoutConfig();
-    	} catch (FileNotFoundException e) {
-    		//whatever
     	} catch (BadConfigFormatException e) {
     		//something
-    	}
+    	} catch (FileNotFoundException e) {
+    		//whatever
+    	} 
     }
 	
 	public void loadSetupConfig() throws FileNotFoundException, BadConfigFormatException{
@@ -53,9 +53,16 @@ public class Board {
 			
 			//whenever we dont have three eventually an exception
 			
+			if (parts.length != 3) {
+				scanner.close();
+				throw new BadConfigFormatException("Something");
+			}
+			
 			String type = parts[0].trim();
 			String name = parts[1].trim();
 			String symbol = parts[2].trim();
+			
+		
 			
 			char initial = symbol.charAt(0);
 			roomMap.put(initial, new Room (name, null, null));
@@ -135,7 +142,7 @@ public class Board {
 		}
 	}
 
-	public void setConfigFiles(String setupConfigFiles, String layoutConfigFiles) {
+	public void setConfigFiles(String layoutConfigFiles, String setupConfigFiles) {
 		this.setupConfigFiles = setupConfigFiles;
 		this.layoutConfigFiles = layoutConfigFiles;
 	}
