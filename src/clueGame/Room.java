@@ -22,7 +22,7 @@ public class Room {
 	}
 	public BoardCell getCenterCell() {
 		return null;
-	}
+	} 
 	public BoardCell getLabelCell () {
 		return labelCell;
 	}

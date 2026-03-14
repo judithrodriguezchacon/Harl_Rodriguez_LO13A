@@ -25,7 +25,7 @@ public class Board {
     }
     
     /*
-     * initialize the board (since we are using singleton pattern)
+     * initialize the board (ssince we are using singleton pattern)
      */
 	public void initialize() {
 		
@@ -43,9 +43,13 @@ public class Board {
 		this.setupConfigFiles = setupConfigFiles;
 		this.layoutConfigFiles = layoutConfigFiles;
 	}
+	
+	public Room getRoom(char initial) {
+	    return roomMap.get(initial);
+	}
 
-	public Room getRoom(char name) {
-		return roomMap.get(name);
+	public Room getRoom(BoardCell cell) {
+	    return roomMap.get(cell.getInitial());
 	}
 	
 	public int getNumRows() {
