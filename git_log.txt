@@ -1,0 +1,140 @@
+commit e32b3e9fbf87422a07ccc84e8670e1ad5fc55562
+Author: Judith Rodriguez <judith_rodriguezchacon@mines.edu>
+Date:   Fri Mar 13 23:50:03 2026 -0600
+
+    Added exceptions
+
+commit 950151462a3a2d03dd69a2a223f81d7760349170
+Author: JadeAndAndi <eharlsma17@gmail.com>
+Date:   Fri Mar 13 23:38:45 2026 -0600
+
+    added correct clue file
+
+commit 6423cac17d331cf6fdc25742283ce648647520d5
+Author: Judith Rodriguez <judith_rodriguezchacon@mines.edu>
+Date:   Fri Mar 13 23:36:01 2026 -0600
+
+    Added try catch to intialize
+
+commit 450a42a396edf4f24cc8184b3739f5d400167320
+Author: Judith Rodriguez <judith_rodriguezchacon@mines.edu>
+Date:   Fri Mar 13 23:24:40 2026 -0600
+
+    Created board and took in file input
+
+commit 387ac3bd722b7e0fd826cebef7c45fe29fd7b7f2
+Merge: 270e179 faa7566
+Author: JadeAndAndi <eharlsma17@gmail.com>
+Date:   Fri Mar 13 22:12:17 2026 -0600
+
+    Merge branch 'main' of github.com:judithrodriguezchacon/Harl_Rodriguez_LO13A
+
+commit 270e179ce2006a53fbf74ca27520d1887dc5778f
+Author: JadeAndAndi <eharlsma17@gmail.com>
+Date:   Fri Mar 13 22:10:22 2026 -0600
+
+    board stuff ig?
+
+commit faa7566719ba661a3360c831a291499322e31641
+Author: Judith Rodriguez <judith_rodriguezchacon@mines.edu>
+Date:   Fri Mar 13 22:09:25 2026 -0600
+
+    BoardCell finilized
+
+commit 3348edc6ee9d3fb8347835bc719911afaf4f4ee5
+Merge: 367f19c d9d5275
+Author: Judith Rodriguez <judith_rodriguezchacon@mines.edu>
+Date:   Fri Mar 13 21:47:12 2026 -0600
+
+    Merge branch 'main' of https://github.com/judithrodriguezchacon/Harl_Rodriguez_LO13A
+    This merge is necessary becaus we modified same documents but then changed back to normal, but github thinks they're different (they shouldn't be)
+    :wq
+    :qw
+    :wq
+
+commit 367f19c77bc3e1d6f5dc4d7b37584252ca67c7dc
+Author: Judith Rodriguez <judith_rodriguezchacon@mines.edu>
+Date:   Fri Mar 13 21:46:46 2026 -0600
+
+    Added returns in null and tested board getCell(errored, but now it's back to previous version)
+
+commit d9d527561fc51bb5f451679ddebdfc6ea415c3f9
+Author: JadeAndAndi <eharlsma17@gmail.com>
+Date:   Fri Mar 13 21:28:07 2026 -0600
+
+    added txt explinations
+
+commit 163953f9709c6326f0609cb85efa760e416eac3f
+Author: Judith Rodriguez <judith_rodriguezchacon@mines.edu>
+Date:   Fri Mar 13 21:24:31 2026 -0600
+
+    Added second getRoom with char
+
+commit 9ed696af481ef784432bf41585748479e0a57e4d
+Author: Judith Rodriguez <judith_rodriguezchacon@mines.edu>
+Date:   Fri Mar 13 21:09:30 2026 -0600
+
+    BoardCell is finalized and working, Room is finalized and working, deleted char version of getRoom
+
+commit d84d05dc17654ef895a615485fa87620704f2970
+Merge: c055f2f 3c38ac2
+Author: JadeAndAndi <eharlsma17@gmail.com>
+Date:   Fri Mar 13 20:09:02 2026 -0600
+
+    Merge branch 'main' of github.com:judithrodriguezchacon/Harl_Rodriguez_LO13A
+
+commit c055f2ffd3648110609823f2cc33b74543d22ec9
+Author: JadeAndAndi <eharlsma17@gmail.com>
+Date:   Fri Mar 13 20:08:35 2026 -0600
+
+    tests set up
+
+commit 3c38ac211d03d7b3fb12da7aa22b3359fb516a0f
+Author: Judith Rodriguez <judith_rodriguezchacon@mines.edu>
+Date:   Fri Mar 13 18:35:39 2026 -0600
+
+    Added  placeholder functions
+
+commit 4df004d675a02fc44ec52bca19f714f9f7d6d76b
+Merge: 1115069 fdfadbb
+Author: Judith Rodriguez <judith_rodriguezchacon@mines.edu>
+Date:   Fri Mar 13 18:17:55 2026 -0600
+
+    Merge branch 'main' of https://github.com/judithrodriguezchacon/Harl_Rodriguez_LO12A
+    This merge is neccesary to push Judith's changes
+
+commit 11150691de5fffa72bd704f0b63ae30964e080a7
+Author: Judith Rodriguez <judith_rodriguezchacon@mines.edu>
+Date:   Fri Mar 13 18:14:01 2026 -0600
+
+    BoardCell has all the methods now
+
+commit fdfadbb446e319781ff3725a0338e8b382746dac
+Author: JadeAndAndi <eharlsma17@gmail.com>
+Date:   Fri Mar 13 17:58:15 2026 -0600
+
+    set up board methods
+
+commit 01e324c7e79b587cb122cecba2d3ccbc4b9c044c
+Author: JadeAndAndi <eharlsma17@gmail.com>
+Date:   Fri Mar 13 16:19:21 2026 -0600
+
+    set up clue calsses
+
+commit 5c313483f1d0b13c939642c88cf234e88715574a
+Author: JadeAndAndi <eharlsma17@gmail.com>
+Date:   Fri Mar 13 14:05:43 2026 -0600
+
+    added new files and packages
+
+commit c490106c5cd73aff08e657f57090d4ca6ef6901e
+Author: Judith Rodriguez <judith_rodriguezchacon@mines.edu>
+Date:   Thu Mar 12 14:43:33 2026 -0600
+
+    Added gitignore
+
+commit c0e35696420c2da4087f4d42804d8694d937b4f2
+Author: Judith Rodriguez <judith_rodriguezchacon@mines.edu>
+Date:   Thu Mar 12 14:35:07 2026 -0600
+
+    Setting Up Files - This is the same version as LO12A
