@@ -30,7 +30,7 @@ public class Board {
 	public void initialize() {
 		
 	}
-	
+
 	public void loadSetupConfig() {
 		
 	}
@@ -43,6 +43,7 @@ public class Board {
 		this.setupConfigFiles = setupConfigFiles;
 		this.layoutConfigFiles = layoutConfigFiles;
 	}
+
 	
 	public Room getRoom(char initial) {
 	    return roomMap.get(initial);
