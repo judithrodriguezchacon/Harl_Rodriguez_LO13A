@@ -39,6 +39,7 @@ public class TestBoardCell {
 	public boolean getOccupied() {
 		return occupied;
 	}
+
 	
 }
 	
