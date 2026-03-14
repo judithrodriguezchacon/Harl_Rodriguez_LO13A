@@ -11,6 +11,8 @@ public class Board {
 	private Map<Character, Room> roomMap;
 	private static Board theInstance = new Board();
 	
+	
+	
 	//singleton style constructor
 
     // constructor is private to ensure only one can be created
@@ -56,13 +58,5 @@ public class Board {
 	
 	public BoardCell getCell(int row, int col) {
 		return grid[row][col];
-	}
-	public char getRoom(char c) {
-		return c;
-	}
-	
-	
-	
-	
-	
+	}	
 }
