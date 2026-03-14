@@ -1,6 +1,9 @@
 package clueGame;
 
 import java.util.*;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
 
 public class Board {
 	private BoardCell[][] grid;
@@ -25,18 +28,24 @@ public class Board {
     }
     
     /*
-     * initialize the board (ssince we are using singleton pattern)
+     * initialize the board (since we are using singleton pattern)
      */
 	public void initialize() {
-		
+		try {
+			loadSetupConfig();
+			loadLayoutConfig();
+		}
+		catch(BadConfigFormatException e){
+			System.out.println(e);
+		}
 	}
 	
-	public void loadSetupConfig() {
-		
+	public void loadSetupConfig() throws FileNotFoundException {
+		Scanner scanner = new Scanner(new File("setupConfigFiles"));
 	}
 	
 	public void loadLayoutConfig() {
-		
+		Scanner scanner = new Scanner(new File("layoutConfigFiles"));
 	}
 
 	public void setConfigFiles(String setupConfigFiles, String layoutConfigFiles) {
