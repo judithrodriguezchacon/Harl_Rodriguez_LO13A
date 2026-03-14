@@ -1,0 +1,14 @@
+//Rooms and room cards
+Room, Gardania, G
+Room, Paris, P
+Room, Millicent's, M
+Room, The Diamond Castle, D
+Room, Oceana, O
+Room, Fairytopia, F
+Room, Magical World, W
+Room, Apollonia, A
+Room, Flutterfield, L
+Room, Fakeout, H
+//Other spaces on the board
+Space, Unused, X
+Space, Walkway, K
