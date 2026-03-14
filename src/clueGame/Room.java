@@ -21,10 +21,13 @@ public class Room {
 		return name;
 	}
 	public BoardCell getCenterCell() {
-		return null;
+		return centerCell;
 	} 
 	public BoardCell getLabelCell () {
 		return labelCell;
+	}
+	public void setLabelCell(BoardCell labelCell) {
+		this.labelCell = labelCell;
 	}
 
 }

@@ -14,20 +14,18 @@ public class BoardCell {
 	private boolean roomCenter;
 	private char secretPassage;
 	
-	private boolean isDoor;
-	
 	private Set<BoardCell> adjList;
 	
-	public BoardCell(int row, int col, char initial, DoorDirection doorDirection, boolean roomLabel, boolean roomCenter, char secretPassage, Set<BoardCell> adjList) {
+	public BoardCell(int row, int col, char initial) {
 		super();
 		this.row = row;
 		this.col = col;
 		this.initial = initial;
-		this.doorDirection = doorDirection;
-		this.roomLabel = roomLabel;
-		this.roomCenter = roomCenter;
-		this.secretPassage = secretPassage;
-		this.adjList = adjList;
+		this.doorDirection = DoorDirection.NONE;
+		this.roomLabel = false;
+		this.roomCenter = false;
+		this.secretPassage = ' ';
+		this.adjList = new HashSet<>();
 	}
 	
 	
@@ -52,7 +50,7 @@ public class BoardCell {
 	}
 		
 	public boolean isDoorway() {
-		return isDoor;  //FIX THIS
+		return doorDirection != DoorDirection.NONE;  
 	}
 	
 	public void setDoorDirection(DoorDirection doorDirection) {
@@ -77,7 +75,7 @@ public class BoardCell {
 		return roomCenter;
 	}
 	
-	private void setRoomCenter(boolean roomCenter) {
+	public void setRoomCenter(boolean roomCenter) {
 		this.roomCenter = roomCenter;
 	}
 	
@@ -89,41 +87,4 @@ public class BoardCell {
 	public void setSecretPassage(char secretPasage) {
 		this.secretPassage = secretPasage;
 	}
-	
-	
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

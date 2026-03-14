@@ -39,9 +39,15 @@ public class Board {
 			System.out.println(e);
 		}
 	}
+<<<<<<< HEAD
 	
 	public void loadSetupConfig() throws FileNotFoundException {
 		Scanner scanner = new Scanner(new File("setupConfigFiles"));
+=======
+
+	public void loadSetupConfig() {
+		
+>>>>>>> faa7566719ba661a3360c831a291499322e31641
 	}
 	
 	public void loadLayoutConfig() {
@@ -52,6 +58,7 @@ public class Board {
 		this.setupConfigFiles = setupConfigFiles;
 		this.layoutConfigFiles = layoutConfigFiles;
 	}
+
 	
 	public Room getRoom(char initial) {
 	    return roomMap.get(initial);
