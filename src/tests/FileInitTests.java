@@ -46,7 +46,7 @@ public class FileInitTests {
 		assertEquals("The Diamond Castle", board.getRoom('D').getName() );
 		assertEquals("Oceana", board.getRoom('O').getName() );
 		assertEquals("Fairytopia", board.getRoom('F').getName() );
-		assertEquals("Magical World,", board.getRoom('W').getName() );
+		assertEquals("Magical World", board.getRoom('W').getName() ); //this had a comma where it didnt need to 
 		assertEquals("Apollonia", board.getRoom('A').getName() );
 		assertEquals("Flutterfield", board.getRoom('L').getName() );
 		assertEquals("Walkway", board.getRoom('K').getName() );
@@ -108,7 +108,7 @@ public class FileInitTests {
 		assertFalse( cell.isDoorway()) ;
 
 		// this is a label cell to test
-		cell = board.getCell(2, 3);
+		cell = board.getCell(1, 2); //we had (2,3 )
 		room = board.getRoom( cell ) ;
 		assertTrue( room != null );
 		assertEquals( room.getName(), "Fairytopia" ) ;
@@ -116,7 +116,7 @@ public class FileInitTests {
 		assertTrue( room.getLabelCell() == cell );
 		
 		// this is a room center cell to test
-		cell = board.getCell(4, 15);
+		cell = board.getCell(3, 14); //used to be(4,15)
 		room = board.getRoom( cell ) ;
 		assertTrue( room != null );
 		assertEquals( room.getName(), "Gardania" ) ;
@@ -124,7 +124,7 @@ public class FileInitTests {
 		assertTrue( room.getCenterCell() == cell );
 		
 		// this is a secret passage test
-		cell = board.getCell(6, 24);
+		cell = board.getCell(7, 25);
 		room = board.getRoom( cell ) ;
 		assertTrue( room != null );
 		assertEquals( room.getName(), "Millicent's" ) ;
