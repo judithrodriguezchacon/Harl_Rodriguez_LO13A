@@ -31,6 +31,10 @@ public class Board {
      * initialize the board (since we are using singleton pattern)
      */
     public void initialize() {
+    	roomMap = new HashMap<>();
+    	grid = null;
+    	numRows = 0;
+    	numColumns = 0;
     	try {
     		loadSetupConfig();
     		loadLayoutConfig();
