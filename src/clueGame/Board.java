@@ -35,9 +35,9 @@ public class Board {
     		loadSetupConfig();
     		loadLayoutConfig();
     	} catch (BadConfigFormatException e) {
-    		//something
+    		System.err.println(e.getMessage());
     	} catch (FileNotFoundException e) {
-    		//whatever
+    		System.err.println(e.getMessage());
     	} 
     }
 	
@@ -48,7 +48,7 @@ public class Board {
 		
 		while (scanner.hasNextLine()){
 			String line = scanner.nextLine().trim();
-			if (line.length() == 0) {
+			if (line.length() == 0 || line.startsWith("//")) {
 				continue;
 			}
 			
@@ -141,17 +141,11 @@ public class Board {
 					}else if (marker == '#') {
 						cell.setLabel(true);
 						roomMap.get(initial).setLabelCell(cell);
-					}else if (marker == '>') {
-						cell.setDoorDirection(DoorDirection.RIGHT);
+					//}else if (marker == '>') {
+					//	cell.setDoorDirection(DoorDirection.RIGHT);
 					}// this might be trouble
-					else if (marker == 'D') {
-						cell.setSecretPassage('K');
-					}else if (marker == 'G') {
-						cell.setSecretPassage('K');
-					}else if (marker == 'P') {
-						cell.setSecretPassage('K');
-					}else if (marker == 'M') {
-						cell.setSecretPassage('K');
+					else if (Character.isLetter(marker)) {
+						cell.setSecretPassage(marker);
 					}
 				}
 				grid[row][col] = cell;
